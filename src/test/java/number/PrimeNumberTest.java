@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import lucas.PrimeNumberLucasLehmer;
 import simple.PrimeNumberSimple;
 import sqrt.PrimeNumberSquareRoot;
 import stream.PrimeNumberStream;
@@ -17,9 +18,10 @@ public class PrimeNumberTest {
 	@Before
 	public void setUp() {
 //		numbers = new PrimeNumberSimple();
-		numbers = new PrimeNumberStream();
-		numbers = new PrimeNumberSquareRoot();
+//		numbers = new PrimeNumberStream();
+//		numbers = new PrimeNumberSquareRoot();
 //		numbers = new PrimeNumberWilson();
+		numbers = new PrimeNumberLucasLehmer();
 	}
 	
 	@Test
