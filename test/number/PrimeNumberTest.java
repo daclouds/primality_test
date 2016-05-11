@@ -1,7 +1,6 @@
 package number;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +17,7 @@ public class PrimeNumberTest {
 	@Before
 	public void setUp() {
 //		numbers = new PrimeNumberSimple();
-//		numbers = new PrimeNumberStream();
+		numbers = new PrimeNumberStream();
 		numbers = new PrimeNumberSquareRoot();
 //		numbers = new PrimeNumberWilson();
 	}
@@ -36,6 +35,11 @@ public class PrimeNumberTest {
 	@Test
 	public void testIsNotAPrime() throws Exception {
 		assertFalse(numbers.isPrime(Integer.MAX_VALUE-1));
+	}
+	
+	@Test
+	public void testNegative() throws Exception {
+		assertFalse(numbers.isPrime(-1));
 	}
 
 }
